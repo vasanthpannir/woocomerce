@@ -17,4 +17,4 @@ class CustomerHelper(object):
         payload['password'] = password
         payload.update(kwargs)
         create_user_json = self.request_utility.post('customers', payload=payload,expected_status_code=201)
-        return True
+        return create_user_json
